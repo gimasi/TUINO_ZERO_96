@@ -1,6 +1,6 @@
 # TUINO 096
 
-TUINO 096 is an Arduino ZERO/M0 PRO compatible board which has been developed for NBIoT applications. On the same form factor of the original Arduino board we have added a Quectel BG96 which brings NB1/CATM1/2G connectivity and GNSS functionality, delivering the best development platform for testing the new NBIoT networks. 
+TUINO 096 is an Arduino ZERO/M0 PRO compatible board which has been developed for NBIoT applications. On the same form factor of the original Arduino board we have added a Quectel BG96 which brings NB1/CATM1/2G connectivity and GNSS functionality, delivering the best development platform for testing the new NBIoT networks.<br/>
 <br/>
 <img src="/docs/tuino_096.jpg"/>
 <br/>
