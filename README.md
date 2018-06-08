@@ -1,24 +1,53 @@
 # TUINO 096
 
-TUINO 096 is an Arduino Zero/M0/M0 PRO compatible board which has been developed for NBIoT applications. On the same form factor of the Arduino Zero we have added a Quectel BG96 which brings NB1/CATM1 and 2G connectivity.
+TUINO 096 is an Arduino ZERO/M0 PRO compatible board which has been developed for NBIoT applications. On the same form factor of the original Arduino board we have added a Quectel BG96 which brings NB1/CATM1/2G connectivity and GNSS functionality, delivering the best development platform for testing the new NBIoT networks. 
 <br/>
 <img src="/docs/tuino_096.jpg"/>
 <br/>
-We have removed the Arduino Zero EDBG chip we have added the BG96 which is been controlled by the serial and some of the ports which were used for the EDBG. In specifi we have:
-* BG96 POWER PIN = PIN 12
-* BG96 RESET PIN = PIN 11
-* BG96 INTERRUPT PIN => PIN
+To add the BG96, since an additional serial and control pins where needed, we have removed the EDBG chip present in the original board design, this limits the debugging feature of the Tuino 096, but mantains full compatibility for all of the other functions. In specific the BG96 is connected to the following pins:
+* BG96 POWER PIN      => PIN 12
+* BG96 RESET PIN      => PIN 11
+* BG96 INTERRUPT PIN  => PIN 38
+* BG96 Serial         => EDBG Serial, which is accessible a 'Serial' in the Arudino Sketch 
 <br/>
-As you can see from the picture on the Tuino 096 we have 2 SMA connectors one for the RF part and one for the GPS antenna since the BG96 has also a GNSS module inside. So you can develop a complete tracning solution.
+As you can see from the picture the Tuino 096 has 2 SMA connectors one for RF  and one for GNSS. A complete tracking solution has never been easier to develop.
 <br>
 <br/>
 
 ## INITIAL SETUP
-A specific board manager file for the Tuino 096 is coming soon... In the meantime for those that have received a pre-series sample you can program it by selecting Arduino/Genuino MO Pro as board.
+A specific board manager file for the Tuino 096 is coming soon... In the meantime for those that have received a pre-series sample you can program it by selecting Arduino/Genuino ZERO or M0 Pro as board.
 
-## DIFFERENCES WITH M0/M0 PRO
-Apart from the BG96 on board, we have decided to use the legacy SPI on D10/D11/D12.
+## DIFFERENCES WITH ARDUINO ZERO/M0 PRO
+Apart from the BG96 on board, we have decided to use the legacy SPI on D10/D11/D12. And some pin port numbers are different from the original Arduino ZERO.<br>
+Here a list of defines for the D0-13 pin numbering ( again this wil not be necessary as soon as we deliver the specific Tuino 096 board manager file )
 
+```c
+// You need to select Arduino ZERO (Native USB Port) for this pin numbering
+
+#define   D0   0
+#define   D1   1
+#define   D2   8
+#define   D3   9
+#define   D4   4
+#define   D5   3
+#define   D6   2
+#define   D7   5
+#define   D8   6
+#define   D9   7
+#define   D10  10
+#define   D11  23
+#define   D12  22
+#define   D13  24
+
+#define   A0  14
+#define   A1  15
+#define   A2  16
+#define   A3  17
+#define   A4  18
+#define   A5  19
+
+
+```
 
 ## EXAMPLE CODE
 Here a first example of the code to control the BG96 via the USB port:
@@ -42,7 +71,7 @@ void setup() {
     pinMode(BG96_RESET, OUTPUT);
     pinMode(BG96_PWR, OUTPUT);
 
- 	digitalWrite(BG96_RESET,HIGH);
+ 	  digitalWrite(BG96_RESET,HIGH);
     
     // 
   	digitalWrite(BG96_PWR,HIGH);
