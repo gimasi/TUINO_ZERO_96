@@ -10,40 +10,39 @@ To add the BG96, since an additional serial and control pins where needed, we ha
 * BG96 INTERRUPT PIN  => PIN 38
 * BG96 Serial         => EDBG Serial, which is accessible a 'Serial' in the Arudino Sketch 
 <br/>
-As you can see from the picture the Tuino 096 has 2 SMA connectors one for RF  and one for GNSS. A complete tracking solution has never been easier to develop.
+As you can see from the picture the Tuino 096 has 2 SMA connectors one for RF ( the one near the LEDs) and one for GNSS ( the one near the SIM card slot). A complete tracking solution has never been easier to develop.
 <br>
 <br/>
 
 ## INITIAL SETUP
-A specific board manager file for the Tuino 096 is coming soon... In the meantime for those that have received a pre-series sample you can program it by selecting Arduino/Genuino ZERO or M0 Pro as board.
+A specific board manager file for the Tuino 096 is coming soon... In the meantime for those that have received a pre-series sample you can program it by selecting Arduino/Genuino M0 as board.
 
-## DIFFERENCES WITH ARDUINO ZERO/M0 PRO
-Apart from the BG96 on board, we have decided to use the legacy SPI on D10/D11/D12. And some pin port numbers are different from the original Arduino ZERO.<br>
+## DIFFERENCES WITH ARDUINO M0 
+Apart from the BG96 on board, we have decided to use the legacy SPI on D10/D11/D12. And some pin port numbers are different from the original Arduino M0.<br>
 Here a list of defines for the D0-13 pin numbering ( again this wil not be necessary as soon as we deliver the specific Tuino 096 board manager file )
 
 ```c
-// You need to select Arduino ZERO (Native USB Port) for this pin numbering
-
+// You need to select Arduino M0 for this pin numbering
 #define   D0   0
 #define   D1   1
 #define   D2   8
 #define   D3   9
-#define   D4   4
+#define   D4   2
 #define   D5   3
-#define   D6   2
+#define   D6   4
 #define   D7   5
 #define   D8   6
 #define   D9   7
 #define   D10  10
-#define   D11  23
-#define   D12  22
-#define   D13  24
+#define   D11  21
+#define   D12  18
+#define   D13  20
 
-#define   A0  14
-#define   A1  15
-#define   A2  16
-#define   A3  17
-#define   A4  18
+#define   A0  24
+#define   A1  25
+#define   A2  26
+#define   A3  27
+#define   A4  28
 #define   A5  19
 
 
