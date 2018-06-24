@@ -99,7 +99,8 @@ void loop() {
 
 ```
 
-Find the complete script in the utilities directory.
+Find the complete script <b>bg96_proxy</b> in the utilities directory.
 
-## Library
+## LIBRARY
 
+A initial library to connect and send data via UDP is present in the library directory.
