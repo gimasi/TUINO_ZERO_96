@@ -70,7 +70,7 @@ You can use one of these two functions to attach.<br/>
 <br/>
 
 ```c
-uint8_t gmxBC95_isNetworkAttached(int *attach_status);
+uint8_t gBG96_isNetworkAttached(int *attach_status);
 ```
 This function simply check's if we are attached returning in the attach_status variable this possible values:
 
@@ -87,7 +87,7 @@ This function simply check's if we are attached returning in the attach_status v
 * 10    Registered for “CSFB not preferred”, roaming (not applicable)
 
 
-## Sending ( and receiving ) Data
+## Sending  Data
 
 ```c
 uint8_t BG96_SocketOpen(char *ip, uint16_t port);
