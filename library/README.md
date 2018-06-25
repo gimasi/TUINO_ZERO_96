@@ -37,7 +37,7 @@ uint8_t BG96_setCatM1(char *apn);
 Configures for LTE-CATM1 connection. The APN is the only parameter.<br/>
 
 ```c
-uint8_t BG96_setNBIoT(char *apn);
+uint8_t BG96_setNBIoT(char *apn, char *band);
 ```
 Configures for LTE-NB1 connection. The APN is one of the parameters, the other is the channel, use the following values:<br/>
 
