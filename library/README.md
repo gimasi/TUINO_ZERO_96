@@ -70,21 +70,16 @@ You can use one of these two functions to attach.<br/>
 <br/>
 
 ```c
-uint8_t gBG96_isNetworkAttached(int *attach_status);
+uint8_t gBG96_isNetworkAttached(int *attach_status, bool mode);
 ```
-This function simply check's if we are attached returning in the attach_status variable this possible values:
+The mode parameter select wheter we call AT+CREG or AT+CEREG, if mode is <b>true</b> AT+CREG is called, if mode is <b>false</b> AT+CEREG is called and these are the possible return values:
 
-* 0     Not registered, MT is not currently searching an operator to register to
-* 1     Registered, home network
-* 2     Not registered, but MT is currently trying to attach or searching an operator to register to
-* 3     Registration denied
-* 4     Unknown (e.g. out of E-UTRAN coverage)
-* 5     Registered, roaming
-* 6     Registered for “SMS only”, home network (not applicable)
-* 7     Registered for “SMS only”, roaming (not applicable)
-* 8     Attached for emergency bearer services only
-* 9     Registered for “CSFB not preferred”, home network (not applicable)
-* 10    Registered for “CSFB not preferred”, roaming (not applicable)
+* 0 Not registered. MT is not currently searching an operator to register to.
+* 1 Registered, home network
+* 2 Not registered, but MT is currently trying to attach or searching an operator to register to.
+* 3 Registration denied
+* 4 Unknown
+* 5 Registered, roaming
 
 
 ## Sending  Data
