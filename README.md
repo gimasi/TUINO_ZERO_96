@@ -90,6 +90,6 @@ void loop() {
 
 Find the complete script <b>bg96_proxy</b> in the utilities directory, which verifies if the BG96 is actually on, since the power sequence can turn off the chip if on.
 
-## LIBRARY
+## BG96 LIBRARY
 
 A initial library to connect and send data via UDP is present in the library directory.
