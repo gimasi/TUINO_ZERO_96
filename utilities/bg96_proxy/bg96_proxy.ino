@@ -1,8 +1,3 @@
-
-
-#define BG96_RESET  11
-#define BG96_PWR    12
-
 void setup() {
   char c;
   char wait_for_string[]="OK";
@@ -15,8 +10,8 @@ void setup() {
   // initialize digital pin LED_BUILTIN as an output.
   pinMode(LED_BUILTIN, OUTPUT);
 
-  pinMode(BG96_RESET, OUTPUT);
-  pinMode(BG96_PWR, OUTPUT);
+  pinMode(PIN_BG96_RESET, OUTPUT);
+  pinMode(PIN_BG96_PWRKEY, OUTPUT);
 
   // Blink Led
   digitalWrite(LED_BUILTIN,HIGH);
@@ -29,16 +24,16 @@ void setup() {
   delay(100);
  
   
-  SerialUSB.begin(9600);
-  SerialUSB.println("Starting..");
+  Serial.begin(9600);
+  Serial.println("Starting..");
 
-  Serial.begin(115200);
+  Serial2.begin(115200);
 
   // LOW is disabled
-  digitalWrite(BG96_RESET,LOW);
+  digitalWrite(PIN_BG96_RESET,LOW);
 
   // Let's check if BG96 is on
-  Serial.println("AT");
+  Serial2.println("AT");
 
   matched_chars = 0;
   bg96_is_on = false;
@@ -46,9 +41,9 @@ void setup() {
   
   while (millis() < (start_time + 2000)) 
   {
-    if (Serial.available()>0) 
+    if (Serial2.available()>0) 
     {
-       c = Serial.read();
+       c = Serial2.read();
 
        if (c == wait_for_string[matched_chars]) 
        {
@@ -68,26 +63,26 @@ void setup() {
   if ( bg96_is_on  )
   {
     // Reset 
-    SerialUSB.println("Resetting BG96");
+    Serial.println("Resetting BG96");
     
-    digitalWrite(BG96_RESET,LOW);
+    digitalWrite(PIN_BG96_RESET,LOW);
     delay(500);
-    digitalWrite(BG96_RESET,HIGH);
+    digitalWrite(PIN_BG96_RESET,HIGH);
     delay(500);
-    digitalWrite(BG96_RESET,LOW);
+    digitalWrite(PIN_BG96_RESET,LOW);
     
   }
   else
   {
    
     // Power Up 
-    SerialUSB.println("Powering UP BG96");
+    Serial.println("Powering UP BG96");
     
-    digitalWrite(BG96_PWR,LOW);
+    digitalWrite(PIN_BG96_PWRKEY,LOW);
     delay(500);
-    digitalWrite(BG96_PWR,HIGH);
+    digitalWrite(PIN_BG96_PWRKEY,HIGH);
     delay(1500);
-    digitalWrite(BG96_PWR,LOW);
+    digitalWrite(PIN_BG96_PWRKEY,LOW);
   }
   
 }
@@ -96,15 +91,15 @@ void setup() {
 void loop() {
    byte ch;
    
- if (Serial.available()>0) 
+ if (Serial2.available()>0) 
   {
-    SerialUSB.write(Serial.read());
+    Serial.write(Serial2.read());
   }
 
-  if (SerialUSB.available()>0) 
+  if (Serial.available()>0) 
   {
-    ch = SerialUSB.read();
-    Serial.write(ch);
+    ch = Serial.read();
+    Serial2.write(ch);
   }
 }
 

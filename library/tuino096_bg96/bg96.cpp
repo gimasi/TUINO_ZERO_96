@@ -8,7 +8,7 @@
 void _log(String data )
 {
   #ifdef DEBUG_BG96
-    SerialUSB.println(data);
+    Serial.println(data);
   #endif
 }
 
@@ -16,22 +16,22 @@ void _BG96Reset()
 {
  
   // Reset 
-  digitalWrite(BG96_RESET,LOW);
+  digitalWrite(PIN_BG96_RESET,LOW);
   delay(200);
-  digitalWrite(BG96_RESET,HIGH);
+  digitalWrite(PIN_BG96_RESET,HIGH);
   delay(500);
-  digitalWrite(BG96_RESET,LOW);
+  digitalWrite(PIN_BG96_RESET,LOW);
 }
 
 void _BG96PowerCycle()
 {
 
   // 
-  digitalWrite(BG96_PWR,LOW);
+  digitalWrite(PIN_BG96_PWRKEY,LOW);
   delay(500);
-  digitalWrite(BG96_PWR,HIGH);
+  digitalWrite(PIN_BG96_PWRKEY,HIGH);
   delay(500);
-  digitalWrite(BG96_PWR,LOW);
+  digitalWrite(PIN_BG96_PWRKEY,LOW);
 }
 
 
@@ -39,10 +39,10 @@ void _GPIOInit()
 {
  
     pinMode(BG96_RESET,OUTPUT);
-    pinMode(BG96_PWR,OUTPUT);
+    pinMode(PIN_BG96_PWRKEY,OUTPUT);
     
     digitalWrite(BG96_RESET,LOW);
-    digitalWrite(BG96_PWR,LOW);   
+    digitalWrite(PIN_BG96_PWRKEY,LOW);   
 }
 
 
@@ -67,7 +67,7 @@ uint8_t BG96_init()
 {
 
     // Init AT Interface
-    at_serial_init(&Serial, 115200);
+    at_serial_init(&Serial2, 115200);
 
    _log("BG96 Init");
    
