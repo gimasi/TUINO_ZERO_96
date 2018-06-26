@@ -10,10 +10,8 @@ To add the BG96, since an additional serial and control pins where needed, we ha
 Available on Pin 39 or as <b>PIN_BG96_PWRKEY</b>
 * BG96 RESET PIN<br/>
 Available on Pin 40 or as <b>PIN_BG96_RESET</b>
-<br/>
-* BG96 INTERRUPT 
+* BG96 INTERRUPT<br/> 
 Available on Pin 41 or as <b>PIN_BG96_INT</b>
-<br/>
 * BG96 Serial<br/>
 Accessible a 'Serial2' in the Arudino Sketch<br/>
 
