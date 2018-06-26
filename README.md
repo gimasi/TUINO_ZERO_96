@@ -10,7 +10,7 @@ To add the BG96, since an additional serial and control pins where needed, we ha
 Available on Pin 39 or as <b>PIN_BG96_PWRKEY</b>
 * BG96 RESET PIN<br/>
 Available on Pin 40 or as <b>PIN_BG96_RESET</b>
-<br/><br/>
+<br/>
 * BG96 INTERRUPT 
 Available on Pin 41 or as <b>PIN_BG96_INT</b>
 <br/>
