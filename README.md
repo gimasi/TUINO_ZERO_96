@@ -6,15 +6,15 @@ TUINO 096 is an Arduino ZERO/M0 PRO compatible board which has been developed fo
 <br/>
 To add the BG96, since an additional serial and control pins where needed, we have removed the EDBG chip present in the original board design, this limits the debugging feature of the Tuino 096, but mantains full compatibility for all of the other functions. In specific the BG96 is connected to the following pins:
 <br/>
-* BG96 POWER PIN
+* BG96 POWER PIN<br/>
 Available on Pin 39 or as <b>PIN_BG96_PWRKEY</b>
-* BG96 RESET PIN      => PIN 11
+* BG96 RESET PIN<br/>
 Available on Pin 40 or as <b>PIN_BG96_RESET</b>
-<br/>
-* BG96 INTERRUPT PIN  => PIN 38
+<br/><br/>
+* BG96 INTERRUPT 
 Available on Pin 41 or as <b>PIN_BG96_INT</b>
 <br/>
-* BG96 Serial
+* BG96 Serial<br/>
 Accessible a 'Serial2' in the Arudino Sketch<br/>
 
 <br/>
@@ -31,13 +31,13 @@ Once you have installed it, you will find the Tuino 096 Board in the board list.
 
 ## SERIAL PORTS
 On the Tuino 096 we have 3 serial port:
-* USB
+* USB<br/>
 We have aliased the SerialUSB to Serial, so to mantain compatibility with all code that writes to 'Serial'<br/>
 
-* Serial1 
+* Serial1 <br/>
 This is the serial port avialable on D0/D1<br/>
 
-* Serial2 
+* Serial2 <br/>
 This is the serial port that is connected to the BG96<br/>
 
 ## DIFFERENCES WITH ARDUINO M0 
