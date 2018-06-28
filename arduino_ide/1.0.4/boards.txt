@@ -19,7 +19,7 @@ tuinozero96.upload.speed=57600
 tuinozero96.build.mcu=cortex-m0plus
 tuinozero96.build.f_cpu=48000000L
 tuinozero96.build.usb_product="Arduino M0"
-tuinozero96.build.board=SAM_ZERO
+tuinozero96.build.board=SAMD_ZERO
 tuinozero96.build.core=arduino
 tuinozero96.build.extra_flags=-D__SAMD21G18A__ -mthumb {build.usb_flags}
 tuinozero96.build.ldscript=linker_scripts/gcc/flash_with_bootloader.ld
@@ -34,3 +34,7 @@ tuinozero96.build.emu.mcu=atmega2560
 tuinozero96.bootloader.tool=openocd-withbootsize
 tuinozero96.bootloader.low_fuses=0xff
 tuinozero96.bootloader.file=tuino_096/Bootloader_D21_M0_150515.hex
+
+
+
+
