@@ -66,7 +66,7 @@ uint8_t BG96_setOperator(char *code);
 ```
 
 You can use one of these two functions to attach.<br/>
-<b>gmxBC5_attach</b> sends an AT+CGATT=1 to the module, while <b>gmxBC95_setOperator</b> forces the operator code for the attach AT+COPS=1,2,"code". It's up to you to decide which one to use. <br/>
+<b>BG96_attach</b> sends an AT+CGATT=1 to the module, while <b>BG96_setOperator</b> forces the operator code for the attach AT+COPS=1,2,"code". It's up to you to decide which one to use. <br/>
 <br/>
 
 ```c
