@@ -101,9 +101,12 @@ To perform the upgrade you will 2 USB cables and a Windows 10 computer with 2 US
 * once the script is running, the BG96 should turn on and you should see the blue led flashing
 * install the Quectel USB Drivers that are present in the <b>BG96_firmware_update</b> folder
 * connect the second USB cable to the BG96 USB port, and in your device manager window you should see something like this:
+
 <img src="/docs/bg96_usb_update.png"/>
+
 * install the QFlash software, again present in the <b>BG96_firmware_update</b> folder
 * launch Qflash and select the DM USB port with speed at 460800 bauds. Select the firmware file, latest image you will find it in the <b>BG96_firmwares</b> directory. Click Start
+
 <img src="/docs/bg96_usb_update_qflash.png"/>
 
 
