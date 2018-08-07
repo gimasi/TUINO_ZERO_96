@@ -115,4 +115,4 @@ To perform the upgrade you will 2 USB cables and a Windows 10 computer with 2 US
 
 ## BG96 AT Commands documentation
 
-In the BG96_AT_Commands folder you will find the documentation of the complete AT command set.
+In the <b>BG96_AT_Commands</b> folder you will find the documentation of the complete AT command set.
