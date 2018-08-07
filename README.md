@@ -49,8 +49,6 @@ Here a first example of the code to control the BG96 via the USB port:
 #
 void setup() {
  	
- 	 // initialize digital pin LED_BUILTIN as an output.
- 
    	Serial.begin(9600);
    	Serial.println("Starting..");
 
@@ -93,3 +91,19 @@ Find the complete script <b>bg96_proxy</b> in the utilities directory, which ver
 ## BG96 LIBRARY
 
 A initial library to connect and send data via UDP is present in the library directory.
+
+## FIRMWARE UPGRADE OF BG96
+
+As you can see the Tuino 096 is provided with a second USB port, labeled BG96 USB, this port is used to perform a firmware update of the BG96.<br/>
+You need a Windows 10 computer to perform the update, since the tools provided from Quectel are Windows 10 only.<br/>
+To perform the upgrade you will 2 USB cables and a Windows 10 computer with 2 USB ports. Here are the steps<br/>
+* plug the first USB cable in the standard Tuuino 096 USB port ( MCU USB ), launch the Arduino IDE and load the bg96_proxy.ino script
+* once the script is running, the BG96 should turn on and you should see the blue led flashing
+* install the Quectel USB Drivers that are present in the <b>BG96_firmware_update</b> folder
+* connect the second USB cable to the BG96 USB port, and in your device manager window you should see something like this:
+<img src="/docs/bg96_usb_update.png"/>
+* install the QFlash software, again present in the <b>BG96_firmware_update</b> folder
+* launch Qflash and select the DM USB port with speed at 460800 bauds. Select the firmware file, latest image you will find it in the <b>BG96_firmwares</b> directory. Click Start
+<img src="/docs/bg96_usb_update_qflash.png"/>
+
+
