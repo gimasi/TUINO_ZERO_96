@@ -105,8 +105,9 @@ To perform the upgrade you will 2 USB cables and a Windows 10 computer with 2 US
 <img src="/docs/bg96_usb_update.png"/>
 
 * install the QFlash software, again present in the <b>BG96_firmware_update</b> folder
-* launch Qflash and select the DM USB port with speed at 460800 bauds. 
-* Select the firmware file, latest image you will find it in the <b>BG96_firmwares</b> directory. 
+* Download and unzip the latest firmware image you will find it in the ‘/BG96_firmwares’ directory
+* In the QFlash tool click ‚load FW Files‘
+* Navigate into the unzipped firmware folder into the ‘/update’ subfolder and choose and open a ‘.mbn’ file (doesn’t matter which exactly)
 * Click Start
 
 <img src="/docs/bg96_usb_update_qflash.png"/>
