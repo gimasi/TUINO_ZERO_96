@@ -32,30 +32,34 @@ uint8_t BG96_setGSM(char *apn);
 Configures for GSM/2G connection. The APN is the only parameter.<br/>
 
 ```c
-uint8_t BG96_setCatM1(char *apn);
+uint8_t BG96_setCatM1(char *apn, char *band);
 ```
-Configures for LTE-CATM1 connection. The APN is the only parameter.<br/>
+Configures for LTE-CATM1 connection. The APN is one of the parameters, the other is the channel ( see channel defines below ). <br/>
 
 ```c
 uint8_t BG96_setNBIoT(char *apn, char *band);
 ```
-Configures for LTE-NB1 connection. The APN is one of the parameters, the other is the channel, use the following values:<br/>
+Configures for LTE-NB1 connection. The APN is one of the parameters, the other is the channel ( see channel defines below ). <br/>
 
-* BG96_NB1_BAND_B1                
-* BG96_NB1_BAND_B2                
-* BG96_NB1_BAND_B3                
-* BG96_NB1_BAND_B4                
-* BG96_NB1_BAND_B5                
-* BG96_NB1_BAND_B8                
-* BG96_NB1_BAND_B12               
-* BG96_NB1_BAND_B13               
-* BG96_NB1_BAND_B18               
-* BG96_NB1_BAND_B19               
-* BG96_NB1_BAND_B20               
-* BG96_NB1_BAND_B26               
-* BG96_NB1_BAND_B28               
-* BG96_NB1_BAND_B39               
-* BG96_NB1_BAND_ALL               
+## LTE Channels Defines
+
+use the following values:<br/>
+
+* BG96_LTE_BAND_B1                
+* BG96_LTE_BAND_B2                
+* BG96_LTE_BAND_B3                
+* BG96_LTE_BAND_B4                
+* BG96_LTE_BAND_B5                
+* BG96_LTE_BAND_B8                
+* BG96_LTE_BAND_B12               
+* BG96_LTE_BAND_B13               
+* BG96_LTE_BAND_B18               
+* BG96_LTE_BAND_B19               
+* BG96_LTE_BAND_B20               
+* BG96_LTE_BAND_B26               
+* BG96_LTE_BAND_B28               
+* BG96_LTE_BAND_B39               
+* BG96_LTE_BAND_ALL               
 
 
 ## Attaching to network
@@ -105,7 +109,7 @@ the data buffer must contain a binary sequence of bytes, and data_len is the len
 ```c
 uint8_t BG96_signalQuality(int *rssi, int *ber );
 ```
-Returns ths radio signal level, here the extract from BC95 manual<br/>
+Returns ths radio signal level, here the extract from BG96 manual<br/>
 <b>rssi</b>  Integer type<br/>
 * 0 -113dBm or less
 * 1 -111dBm

@@ -195,9 +195,9 @@ uint8_t BG96_setNBIoT(char *apn, char *band)
   return BG96_OK;
 }
 
-uint8_t BG96_setCatM1(char *apn)
+uint8_t BG96_setCatM1(char *apn, char *band)
 {
-  char cgdcont[128];
+  char temp_string[128];
 
   at_send_command("AT+QCFG=\"nwscanseq\",02,1");
   if ( read_for_responses_dual("OK","ERROR",BG96_DEFAULT_TIMEOUT) != 0 )
@@ -211,9 +211,14 @@ uint8_t BG96_setCatM1(char *apn)
   if ( read_for_responses_dual("OK","ERROR",BG96_DEFAULT_TIMEOUT) != 0 )
     return  BG96_KO;    
 
+  sprintf(temp_string,"AT+QCFG=\"band\",0,0,%s",band);
+ 
+  at_send_command(temp_string);
+  if ( read_for_responses_dual("OK","ERROR",BG96_DEFAULT_TIMEOUT) != 0 )
+    return  BG96_KO;    
 
-  sprintf(cgdcont,"AT+QICSGP=1,1,\"%s\",\"\",\"\",1",apn);
-  at_send_command(cgdcont);
+  sprintf(temp_string,"AT+QICSGP=1,1,\"%s\",\"\",\"\",1",apn);
+  at_send_command(temp_string);
   
   if ( read_for_responses_dual("OK","ERROR",BG96_DEFAULT_TIMEOUT) != 0 )
     return  BG96_KO;   

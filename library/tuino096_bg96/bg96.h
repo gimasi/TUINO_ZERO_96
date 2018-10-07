@@ -13,21 +13,21 @@
 
 
 
-#define BG96_NB1_BAND_B1                "1"
-#define BG96_NB1_BAND_B2                "2"
-#define BG96_NB1_BAND_B3                "4"
-#define BG96_NB1_BAND_B4                "8"
-#define BG96_NB1_BAND_B5                "10"
-#define BG96_NB1_BAND_B8                "80"
-#define BG96_NB1_BAND_B12               "800"
-#define BG96_NB1_BAND_B13               "1000"
-#define BG96_NB1_BAND_B18               "20000"
-#define BG96_NB1_BAND_B19               "40000"
-#define BG96_NB1_BAND_B20               "80000"
-#define BG96_NB1_BAND_B26               "2000000"
-#define BG96_NB1_BAND_B28               "8000000"
-#define BG96_NB1_BAND_B39               "4000000000"
-#define BG96_NB1_BAND_ALL               "A0E189F"
+#define BG96_LTE_BAND_B1                "1"
+#define BG96_LTE_BAND_B2                "2"
+#define BG96_LTE_BAND_B3                "4"
+#define BG96_LTE_BAND_B4                "8"
+#define BG96_LTE_BAND_B5                "10"
+#define BG96_LTE_BAND_B8                "80"
+#define BG96_LTE_BAND_B12               "800"
+#define BG96_LTE_BAND_B13               "1000"
+#define BG96_LTE_BAND_B18               "20000"
+#define BG96_LTE_BAND_B19               "40000"
+#define BG96_LTE_BAND_B20               "80000"
+#define BG96_LTE_BAND_B26               "2000000"
+#define BG96_LTE_BAND_B28               "8000000"
+#define BG96_LTE_BAND_B39               "4000000000"
+#define BG96_LTE_BAND_ALL               "A0E189F"
 
 
 uint8_t BG96_init();
@@ -37,7 +37,7 @@ uint8_t BG96_getIMSI(char *data, uint8_t max_size);
 uint8_t BG96_setOperator(char *code);
 uint8_t BG96_setGSM(char *apn);
 uint8_t BG96_setNBIoT(char *apn, char *band);
-uint8_t BG96_setCatM1(char *apn);
+uint8_t BG96_setCatM1(char *apn, char *band);
 
 uint8_t BG96_attach();
 uint8_t BG96_isNetworkAttached(int *attach_status, bool mode);
