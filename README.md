@@ -92,6 +92,11 @@ Find the complete script <b>bg96_proxy</b> in the utilities directory, which ver
 
 The full schemtic of the board is available <a href="/docs/Tuino096_1.1.pdf">here</a>
 
+## BOOTLOADER
+
+We are using the standard bootloader from Arduino MO, which is available <a href="https://github.com/arduino/ArduinoCore-samd/tree/master/bootloaders/mzero">here</a>.
+
+
 ## BG96 LIBRARY
 
 A initial library to connect and send data via UDP is present in the library directory.
