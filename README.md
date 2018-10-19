@@ -88,7 +88,7 @@ void loop() {
 
 Find the complete script <b>bg96_proxy</b> in the utilities directory, which verifies if the BG96 is actually on, since the power sequence can turn off the chip if on.
 
-## Schematics
+## SCHEMATICS
 
 The full schemtic of the board is available <a href="/docs/Tuino096_1.1.pdf">here</a>
 
