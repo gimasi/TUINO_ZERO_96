@@ -1,26 +1,26 @@
 {
   "packages": [
     {
-      "maintainer": "Gimasi SA",
-      "websiteURL": "http://www.gimasi.ch",
-      "email": "info@gimasi.ch",
-      "name": "tuino0",
+      "name": "arduino-beta",
+      "maintainer": "Arduino Betatesting",
+      "websiteURL": "http://www.arduino.cc/",
+      "email": "packages@arduino.cc",
+      "help": {
+        "online": "http://www.arduino.cc/en/Reference/HomePage"
+      },
       "platforms": [
         {
-          "name": "Tuino SAMD Boards (32-bits ARM Cortex-M0+)",
+          "name": "Arduino SAMD core - Pull request #%%PR_NUMBER%% (build %%BUILD_NUMBER%%)",
           "architecture": "samd",
-          "version": "1.0.5",
-          "category": "Contributed",         
-          "help": {
-            "online": "http://www.tuino.io"
-          },
-          "url": "https://raw.githubusercontent.com/gimasi/TUINO_ZERO_96/master/arduino_ide/tuino0-1.0.5.zip",
-          "archiveFileName": "tuino0-1.0.5.zip",
-          "checksum": "SHA-256:E02C40C52BE4031E3C52BED1E7084B1037E83FD515C63EA1D988DFD234D45DDC",    
-          "size": "1064552",
+          "version": "%%VERSION%%",
+          "category": "Arduino",
+          "url": "http://downloads.arduino.cc/PR/samd/%%FILENAME%%",
+          "archiveFileName": "%%FILENAME%%",
+          "checksum": "SHA-256:%%CHECKSUM%%",
+          "size": "%%SIZE%%",
           "boards": [
             {
-              "name": "Tuino 096"
+              "name": "Arduino Zero"
             }
           ],
           "toolsDependencies": [
@@ -37,7 +37,7 @@
             {
               "packager": "arduino",
               "name": "openocd",
-              "version": "0.9.0-arduino5-static"
+              "version": "0.9.0-arduino6-static"
             },
             {
               "packager": "arduino",
@@ -48,13 +48,17 @@
               "packager": "arduino",
               "name": "CMSIS-Atmel",
               "version": "1.1.0"
+            },
+            {
+              "packager": "arduino",
+              "name": "arduinoOTA",
+              "version": "1.2.0"
             }
           ]
         }
       ],
-      "tools": [] 
+      "tools": [
+      ]
     }
   ]
 }
-
-
