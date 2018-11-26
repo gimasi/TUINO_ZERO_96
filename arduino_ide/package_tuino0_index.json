@@ -16,7 +16,7 @@
           },
           "url": "https://raw.githubusercontent.com/gimasi/TUINO_ZERO_96/master/arduino_ide/tuino0-1.0.5.zip",
           "archiveFileName": "tuino0-1.0.5.zip",
-          "checksum": "SHA256:D574F4CDE946ECEBE3FCA5913604F4D7160AEFBE2E95AD35BEECD1F150351496",    
+          "checksum": "SHA-256:D574F4CDE946ECEBE3FCA5913604F4D7160AEFBE2E95AD35BEECD1F150351496",   
           "size": "2384817",
           "boards": [
             {
