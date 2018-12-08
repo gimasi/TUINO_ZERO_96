@@ -1,0 +1,60 @@
+{
+  "packages": [
+    {
+      "maintainer": "Gimasi SA",
+      "websiteURL": "http://www.gimasi.ch",
+      "email": "info@gimasi.ch",
+      "name": "tuino0",
+      "platforms": [
+        {
+          "name": "Tuino SAMD Boards (32-bits ARM Cortex-M0+)",
+          "architecture": "samd",
+          "version": "1.0.5",
+          "category": "Contributed",         
+          "help": {
+            "online": "http://www.tuino.io"
+          },
+          "url": "https://raw.githubusercontent.com/gimasi/TUINO_ZERO_96/master/arduino_ide/tuino0-1.0.5.zip",
+          "archiveFileName": "tuino0-1.0.5.zip",
+          "checksum": "SHA-256:D574F4CDE946ECEBE3FCA5913604F4D7160AEFBE2E95AD35BEECD1F150351496",   
+          "size": "2384817",
+          "boards": [
+            {
+              "name": "Tuino 096"
+            }
+          ],
+          "toolsDependencies": [
+            {
+              "packager": "arduino",
+              "name": "arm-none-eabi-gcc",
+              "version": "4.8.3-2014q1"
+            },
+            {
+              "packager": "arduino",
+              "name": "bossac",
+              "version": "1.7.0"
+            },
+            {
+              "packager": "arduino",
+              "name": "openocd",
+              "version": "0.9.0-arduino5-static"
+            },
+            {
+              "packager": "arduino",
+              "name": "CMSIS",
+              "version": "4.5.0"
+            },
+            {
+              "packager": "arduino",
+              "name": "CMSIS-Atmel",
+              "version": "1.1.0"
+            }
+          ]
+        }
+      ],
+      "tools": [] 
+    }
+  ]
+}
+
+
