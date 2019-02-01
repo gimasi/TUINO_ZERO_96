@@ -9,7 +9,7 @@
         {
           "name": "Tuino SAMD Boards (32-bits ARM Cortex-M0+)",
           "architecture": "samd",
-          "version": "1.0.5",
+          "version": "1.0.6",
           "category": "Contributed",         
           "help": {
             "online": "http://www.tuino.io"
