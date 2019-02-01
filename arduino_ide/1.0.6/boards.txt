@@ -1,0 +1,40 @@
+######################################################
+#TUINO ZERO96 WITH BOOTLOADER ( Arduino M0 compatible)
+tuinozero96.name=Tuino 096
+tuinozero96.vid.0=0x3116
+tuinozero96.pid.0=0x0096
+tuinozero96.vid.1=0x3116
+tuinozero96.pid.1=0x0096
+tuinozero96.vid.2=0x3116
+tuinozero96.pid.2=0x0096
+tuinozero96.vid.3=0x3116
+tuinozero96.pid.3=0x0096
+tuinozero96.upload.tool=avrdude
+tuinozero96.upload.protocol=stk500v2
+tuinozero96.upload.maximum_size=262144
+tuinozero96.upload.use_1200bps_touch=true
+tuinozero96.upload.wait_for_upload_port=true
+tuinozero96.upload.native_usb=true
+tuinozero96.upload.speed=57600
+tuinozero96.build.mcu=cortex-m0plus
+tuinozero96.build.f_cpu=48000000L
+tuinozero96.build.usb_product="Tuino 096"
+tuinozero96.build.board=SAMD_ZERO
+tuinozero96.build.core=arduino
+tuinozero96.build.extra_flags=-D__SAMD21G18A__ -mthumb {build.usb_flags}
+tuinozero96.build.ldscript=linker_scripts/gcc/flash_with_bootloader.ld
+tuinozero96.build.openocdscript=openocd_scripts/arduino_zero.cfg
+tuinozero96.build.variant=tuino_096
+tuinozero96.build.variant_system_lib=
+tuinozero96.build.vid=0x3116
+tuinozero96.build.pid=0x0096
+tuinozero96.build.preferred_out_format=hex
+tuinozero96.bootloader.size=0x4000
+tuinozero96.build.emu.mcu=atmega2560
+tuinozero96.bootloader.tool=openocd-withbootsize
+tuinozero96.bootloader.low_fuses=0xff
+tuinozero96.bootloader.file=tuino_096/Bootloader_D21_Tuino096.hex
+
+
+
+

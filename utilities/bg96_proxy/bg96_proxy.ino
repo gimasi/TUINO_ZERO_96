@@ -28,6 +28,7 @@ void setup() {
   Serial.println("Starting..");
 
   Serial2.begin(115200);
+  //Serial2.begin(9600);
 
   // LOW is disabled
   digitalWrite(PIN_BG96_RESET,LOW);
