@@ -9,15 +9,15 @@
         {
           "name": "Tuino SAMD Boards (32-bits ARM Cortex-M0+)",
           "architecture": "samd",
-          "version": "1.0.6",
+          "version": "1.0.4",
           "category": "Contributed",         
           "help": {
             "online": "http://www.tuino.io"
           },
-          "url": "https://raw.githubusercontent.com/gimasi/TUINO_ZERO_96/master/arduino_ide/tuino0-1.0.6.zip",
-          "archiveFileName": "tuino0-1.0.6.zip",
-          "checksum": "SHA-256:B3171DDD942CE9BE25FEDE48FFBFEA6013A0BEB948E2B869F2DA834DC066BC6D",   
-          "size": "2384819",
+          "url": "https://raw.githubusercontent.com/gimasi/TUINO_ZERO_96/master/arduino_ide/tuino0-1.0.4.zip",
+          "archiveFileName": "tuino0-1.0.4.zip",
+          "checksum": "SHA-256:E02C40C52BE4031E3C52BED1E7084B1037E83FD515C63EA1D988DFD234D45DDC",   
+          "size": "1064552",
           "boards": [
             {
               "name": "Tuino 096"
@@ -56,3 +56,5 @@
     }
   ]
 }
+
+
